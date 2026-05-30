@@ -18,6 +18,7 @@
 		3A0A001B3A0A000000000001 /* FilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A001A3A0A000000000001 /* FilterSheet.swift */; };
 		3A0A001D3A0A000000000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A001C3A0A000000000001 /* SettingsView.swift */; };
 		3A0A001F3A0A000000000001 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A001E3A0A000000000001 /* EmptyStateView.swift */; };
+		3A0A00333A0A000000000001 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A00323A0A000000000001 /* LearnView.swift */; };
 		3A0A00213A0A000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A00203A0A000000000001 /* Assets.xcassets */; };
 		3A0A00233A0A000000000001 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A00223A0A000000000001 /* PrivacyInfo.xcprivacy */; };
 		3A0A00253A0A000000000001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A00243A0A000000000001 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 		3A0A001A3A0A000000000001 /* FilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSheet.swift; sourceTree = "<group>"; };
 		3A0A001C3A0A000000000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3A0A001E3A0A000000000001 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		3A0A00323A0A000000000001 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		3A0A00203A0A000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0A00223A0A000000000001 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3A0A00243A0A000000000001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3A0A00183A0A000000000001 /* SongDetailView.swift */,
 				3A0A001A3A0A000000000001 /* FilterSheet.swift */,
 				3A0A001C3A0A000000000001 /* SettingsView.swift */,
+				3A0A00323A0A000000000001 /* LearnView.swift */,
 				3A0A001E3A0A000000000001 /* EmptyStateView.swift */,
 			);
 			path = Views;
@@ -199,6 +202,7 @@
 				3A0A001B3A0A000000000001 /* FilterSheet.swift in Sources */,
 				3A0A001D3A0A000000000001 /* SettingsView.swift in Sources */,
 				3A0A001F3A0A000000000001 /* EmptyStateView.swift in Sources */,
+				3A0A00333A0A000000000001 /* LearnView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

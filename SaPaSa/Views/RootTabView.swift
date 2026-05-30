@@ -8,6 +8,11 @@ struct RootTabView: View {
                     Label("Home", systemImage: "music.note.list")
                 }
 
+            LearnView()
+                .tabItem {
+                    Label("Learn", systemImage: "book.closed.fill")
+                }
+
             FavoritesView()
                 .tabItem {
                     Label("Favorites", systemImage: "heart.fill")
