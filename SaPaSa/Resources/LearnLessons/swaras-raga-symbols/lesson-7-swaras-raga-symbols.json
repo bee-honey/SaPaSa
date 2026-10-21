@@ -1,0 +1,36 @@
+{
+  "id": "lesson-7-swaras-raga-symbols",
+  "title": "Lesson 7 - Saptha Swaras and Notation Symbols",
+  "raga": "Theory",
+  "thalam": "Reading support",
+  "note": "Editable theory reference for swaras, raga ascent/descent, and notation marks.",
+  "exercises": [
+    {
+      "id": "saptha-swaras",
+      "number": "1.",
+      "lines": [
+        "Seven swaras: Sa Ri Ga Ma Pa Da Ni",
+        "Fixed swaras: Sa, Pa",
+        "Variable swaras: Ri, Ga, Ma, Da, Ni"
+      ]
+    },
+    {
+      "id": "raga-shape",
+      "number": "2.",
+      "lines": [
+        "Arohanam: ascending movement",
+        "Avarohanam: descending movement",
+        "Prayogas: characteristic phrase movement"
+      ]
+    },
+    {
+      "id": "notation-marks",
+      "number": "3.",
+      "lines": [
+        "Dot above: upper sthayi",
+        "Dot below: lower sthayi",
+        "Dash or spacing: extension / pause, based on local notation rules"
+      ]
+    }
+  ]
+}

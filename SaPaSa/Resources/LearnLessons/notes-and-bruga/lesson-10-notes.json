@@ -1,0 +1,18 @@
+{
+  "id": "lesson-10-notes",
+  "title": "Lesson 10 - Notes",
+  "raga": "Sankarabharanam and notation studies",
+  "thalam": "Add per exercise",
+  "note": "Editable placeholder for notation-reading studies.",
+  "exercises": [
+    {
+      "id": "notes-method",
+      "number": "1.",
+      "lines": [
+        "Read the tala divisions first.",
+        "Speak swaras in rhythm.",
+        "Then sing slowly with pitch."
+      ]
+    }
+  ]
+}

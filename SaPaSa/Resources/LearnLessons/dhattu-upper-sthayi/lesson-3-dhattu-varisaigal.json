@@ -1,0 +1,38 @@
+{
+  "id": "lesson-3-dhattu-varisaigal",
+  "title": "Lesson 3 - Dhattu Varisaigal",
+  "raga": "Mayamalavagowla",
+  "thalam": "Adi tala",
+  "note": "Editable jump-pattern data. Use these rows as a base and expand from the source you are licensed to use.",
+  "exercises": [
+    {
+      "id": "dhattu-1",
+      "number": "1.",
+      "lines": [
+        "S    G    R    M   | G    P   | M    D   ||",
+        "P    N    D    S   | N    D   | P    M   ||",
+        "G    R    S    -   | S    -   | -    -   ||"
+      ]
+    },
+    {
+      "id": "dhattu-2",
+      "number": "2.",
+      "lines": [
+        "S    M    R    G   | R    P   | G    M   ||",
+        "G    D    M    P   | M    N   | P    D   ||",
+        "S    P    N    D   | N    M   | D    P   ||",
+        "M    R    G    S   | R    S   | -    -   ||"
+      ]
+    },
+    {
+      "id": "dhattu-3",
+      "number": "3.",
+      "lines": [
+        "S    P    R    D   | G    N   | M    S   ||",
+        "S    M    N    G   | D    R   | P    S   ||",
+        "S    D    N    P   | D    M   | P    G   ||",
+        "M    R    G    S   | R    S   | -    -   ||"
+      ]
+    }
+  ]
+}

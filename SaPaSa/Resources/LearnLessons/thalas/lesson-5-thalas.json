@@ -1,0 +1,42 @@
+{
+  "id": "lesson-5-thalas",
+  "title": "Lesson 5 - Thalas",
+  "raga": "Theory",
+  "thalam": "Saptha thala framework",
+  "note": "Editable theory cards represented as lesson rows so they render consistently with notation lessons.",
+  "exercises": [
+    {
+      "id": "tala-angas",
+      "number": "1.",
+      "lines": [
+        "Anudhrutham: 1 beat",
+        "Dhrutham: beat + wave",
+        "Laghu: beat + finger counts"
+      ]
+    },
+    {
+      "id": "tala-jathis",
+      "number": "2.",
+      "lines": [
+        "Thisra laghu: 3",
+        "Chathurasra laghu: 4",
+        "Khanda laghu: 5",
+        "Misra laghu: 7",
+        "Sankeerna laghu: 9"
+      ]
+    },
+    {
+      "id": "saptha-thalas",
+      "number": "3.",
+      "lines": [
+        "Dhruva: laghu, dhrutham, laghu, laghu",
+        "Matya: laghu, dhrutham, laghu",
+        "Rupaka: dhrutham, laghu",
+        "Jhampa: laghu, anudhrutham, dhrutham",
+        "Triputa: laghu, dhrutham, dhrutham",
+        "Ata: laghu, laghu, dhrutham, dhrutham",
+        "Eka: laghu"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "lesson-6-saptha-thala-alankaras",
+  "title": "Lesson 6 - Saptha Thala Alankaras",
+  "raga": "Mayamalavagowla",
+  "thalam": "Saptha thalas",
+  "note": "Editable alankara starter set across the seven thalas. Expand each thala/jathi as needed.",
+  "exercises": [
+    {
+      "id": "alankara-dhruva",
+      "number": "1.",
+      "lines": [
+        "Dhruva: 1 0 1 1  | 4 + 2 + 4 + 4",
+        "S R G R | S R G M | R G M P | M G R S",
+        "S N D N | S N D P | N D P M | P D N S"
+      ]
+    },
+    {
+      "id": "alankara-matya",
+      "number": "2.",
+      "lines": [
+        "Matya: 1 0 1     | 4 + 2 + 4",
+        "S R G M | G R | S R G M",
+        "S N D P | D N | S N D P"
+      ]
+    },
+    {
+      "id": "alankara-rupaka",
+      "number": "3.",
+      "lines": [
+        "Rupaka: 0 1      | 2 + 4",
+        "S R | G M P D | S N | D P M G"
+      ]
+    },
+    {
+      "id": "alankara-jhampa",
+      "number": "4.",
+      "lines": [
+        "Jhampa: 1 U 0    | 4 + 1 + 2",
+        "S R G M | P | D N",
+        "S N D P | M | G R"
+      ]
+    },
+    {
+      "id": "alankara-triputa",
+      "number": "5.",
+      "lines": [
+        "Triputa: 1 0 0   | 4 + 2 + 2",
+        "S R G M | P D | N S",
+        "S N D P | M G | R S"
+      ]
+    },
+    {
+      "id": "alankara-ata",
+      "number": "6.",
+      "lines": [
+        "Ata: 1 1 0 0    | 4 + 4 + 2 + 2",
+        "S R G M | R G M P | D N | S N",
+        "S N D P | N D P M | G R | S R"
+      ]
+    },
+    {
+      "id": "alankara-eka",
+      "number": "7.",
+      "lines": [
+        "Eka: 1          | 4",
+        "S R G M | P D N S",
+        "S N D P | M G R S"
+      ]
+    }
+  ]
+}

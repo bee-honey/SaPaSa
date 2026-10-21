@@ -1,0 +1,18 @@
+{
+  "id": "lakshana-geetham-index",
+  "title": "Lakshana Geetham Index",
+  "raga": "Hari Kedaragowla",
+  "thalam": "Add from source",
+  "note": "Local placeholder for lakshana geetham content and raga-feature notes.",
+  "exercises": [
+    {
+      "id": "lakshana-study",
+      "number": "1.",
+      "lines": [
+        "Add verified swara notation here.",
+        "Add sahityam and meaning notes here.",
+        "Compare phrases with arohanam and avarohanam."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "lesson-9-swarajathis-index",
+  "title": "Lesson 9 - Swarajathis Index",
+  "raga": "Bilahari, Kamas, Ananda Bhairavi",
+  "thalam": "Add per composition",
+  "note": "Local index for longer swarajathi material. Add full notation as individual JSON files.",
+  "exercises": [
+    {
+      "id": "swarajathi-structure",
+      "number": "1.",
+      "lines": [
+        "Pallavi: opening section",
+        "Charanam: later section",
+        "Practice one section at a time with tala."
+      ]
+    },
+    {
+      "id": "swarajathi-ragas",
+      "number": "2.",
+      "lines": [
+        "Bilahari",
+        "Kamas",
+        "Ananda Bhairavi"
+      ]
+    }
+  ]
+}

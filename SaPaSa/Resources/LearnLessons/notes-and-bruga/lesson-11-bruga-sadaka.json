@@ -1,0 +1,34 @@
+{
+  "id": "lesson-11-bruga-sadaka",
+  "title": "Lesson 11 - Bruga Sadaka Varisas",
+  "raga": "Multiple practice patterns",
+  "thalam": "Steady tala / metronome",
+  "note": "Editable speed-building rows. Keep these verified before using them for teaching.",
+  "exercises": [
+    {
+      "id": "bruga-1",
+      "number": "1.",
+      "lines": [
+        "S R G M | R G M P | G M P D | M P D N",
+        "P D N S | N D P M | D P M G | P M G R"
+      ]
+    },
+    {
+      "id": "bruga-2",
+      "number": "2.",
+      "lines": [
+        "S G R M | R M G P | G P M D | M D P N",
+        "P N D S | S D N P | N P D M | D M P G"
+      ]
+    },
+    {
+      "id": "bruga-method",
+      "number": "3.",
+      "lines": [
+        "Sing on akara first.",
+        "Increase speed only after pitch is clean.",
+        "Keep each phrase light and even."
+      ]
+    }
+  ]
+}

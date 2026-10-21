@@ -1,0 +1,25 @@
+{
+  "id": "geetha-template",
+  "title": "Geetha Template - Add Local Notation Here",
+  "raga": "Set raga name",
+  "thalam": "Set thalam name",
+  "note": "Duplicate this JSON file for each geetham and replace the rows with verified notation.",
+  "exercises": [
+    {
+      "id": "template-pallavi",
+      "number": "Pallavi",
+      "lines": [
+        "Add swara row here",
+        "Add sahityam row here"
+      ]
+    },
+    {
+      "id": "template-charanam",
+      "number": "Charanam",
+      "lines": [
+        "Add swara row here",
+        "Add sahityam row here"
+      ]
+    }
+  ]
+}

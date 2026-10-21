@@ -1,0 +1,31 @@
+{
+  "id": "lesson-8-geetha-index",
+  "title": "Lesson 8 - Geethas Index",
+  "raga": "Multiple beginner ragas",
+  "thalam": "Multiple thalas",
+  "note": "Use this as the local index for geethas. Add each full geetham as a separate file when you have rights to ship the notation.",
+  "exercises": [
+    {
+      "id": "geetha-flow",
+      "number": "1.",
+      "lines": [
+        "Step 1: Sing swaras only with tala.",
+        "Step 2: Sing sahityam slowly.",
+        "Step 3: Alternate swara and sahityam."
+      ]
+    },
+    {
+      "id": "geetha-ragas",
+      "number": "2.",
+      "lines": [
+        "Malahari",
+        "Suddha Saveri",
+        "Mohanam",
+        "Kalyani",
+        "Saveri",
+        "Kambhoji",
+        "Arabhi"
+      ]
+    }
+  ]
+}

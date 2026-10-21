@@ -1,0 +1,67 @@
+{
+  "id": "lesson-2-jantai-varisaigal",
+  "title": "Lesson 2 - Jantai Varisaigal",
+  "raga": "Mayamalavagowla",
+  "thalam": "Adi tala",
+  "note": "Editable paired-swara patterns for voice firmness and even attack.",
+  "exercises": [
+    {
+      "id": "jantai-1",
+      "number": "1.",
+      "lines": [
+        "SS   RR   GG   MM  | PP   DD  | NN   SS  ||",
+        "SS   NN   DD   PP  | MM   GG  | RR   SS  ||"
+      ]
+    },
+    {
+      "id": "jantai-2",
+      "number": "2.",
+      "lines": [
+        "SS   RR   GG   MM  | RR   GG  | MM   PP  ||",
+        "GG   MM   PP   DD  | MM   PP  | DD   NN  ||",
+        "PP   DD   NN   SS  | SS   NN  | DD   PP  ||",
+        "NN   DD   PP   MM  | DD   PP  | MM   GG  ||"
+      ]
+    },
+    {
+      "id": "jantai-3",
+      "number": "3.",
+      "lines": [
+        "SS   GG   RR   MM  | GG   PP  | MM   DD  ||",
+        "PP   NN   DD   SS  | NN   DD  | PP   MM  ||",
+        "SS   DD   NN   PP  | DD   MM  | PP   GG  ||",
+        "MM   RR   GG   SS  | RR   SS  | -    -   ||"
+      ]
+    },
+    {
+      "id": "jantai-4",
+      "number": "4.",
+      "lines": [
+        "SS   RR   SS   RR  | GG   MM  | GG   MM  ||",
+        "PP   DD   PP   DD  | NN   SS  | NN   SS  ||",
+        "SS   NN   SS   NN  | DD   PP  | DD   PP  ||",
+        "MM   GG   MM   GG  | RR   SS  | RR   SS  ||"
+      ]
+    },
+    {
+      "id": "jantai-5",
+      "number": "5.",
+      "lines": [
+        "SS   RR   GG   RR  | SS   RR  | GG   MM  ||",
+        "RR   GG   MM   GG  | RR   GG  | MM   PP  ||",
+        "SS   NN   DD   NN  | SS   NN  | DD   PP  ||",
+        "NN   DD   PP   DD  | NN   DD  | PP   MM  ||"
+      ]
+    },
+    {
+      "id": "jantai-6",
+      "number": "6.",
+      "lines": [
+        "SS   RR   GG   MM  | PP   MM  | GG   RR  ||",
+        "RR   GG   MM   PP  | DD   PP  | MM   GG  ||",
+        "SS   NN   DD   PP  | MM   PP  | DD   NN  ||",
+        "NN   DD   PP   MM  | GG   MM  | PP   DD  ||"
+      ]
+    }
+  ]
+}

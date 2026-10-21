@@ -10,7 +10,7 @@ struct LearnChapter: Identifiable, Hashable {
     let practicePrompt: String
 }
 
-struct LearnLesson: Identifiable, Hashable {
+struct LearnLesson: Identifiable, Hashable, Decodable {
     let id: String
     let title: String
     let raga: String
@@ -19,7 +19,7 @@ struct LearnLesson: Identifiable, Hashable {
     let exercises: [NotationExercise]
 }
 
-struct NotationExercise: Identifiable, Hashable {
+struct NotationExercise: Identifiable, Hashable, Decodable {
     let id: String
     let number: String
     let lines: [String]
@@ -359,118 +359,24 @@ private struct NotationExerciseView: View {
 
 enum LearnLessonLibrary {
     static func lessons(for chapterID: String) -> [LearnLesson] {
-        switch chapterID {
-        case "swaravali-varisaigal":
-            return [
-                LearnLesson(
-                    id: "lesson-1-swaravali",
-                    title: "Lesson 1 - Swaravali Varisaigal",
-                    raga: "Mayamalavagowla",
-                    thalam: "Adi tala",
-                    note: "Starter notation view inspired by the lesson structure. Keep tala steady and render each line in first speed before increasing speed.",
-                    exercises: [
-                        NotationExercise(id: "swaravali-1", number: "1.", lines: [
-                            "Sa   Ri   Ga   Ma  | Pa   Da  | Ni   Sa  ||",
-                            "Sa   Ni   Da   Pa  | Ma   Ga  | Ri   Sa  ||"
-                        ]),
-                        NotationExercise(id: "swaravali-2", number: "2.", lines: [
-                            "S    R    S    R   | S    R   | G    M   ||",
-                            "S    R    G    M   | P    D   | N    S   ||",
-                            "S    N    S    N   | S    N   | D    P   ||",
-                            "S    N    D    P   | M    G   | R    S   ||"
-                        ]),
-                        NotationExercise(id: "swaravali-3", number: "3.", lines: [
-                            "S    R    G    R   | S    R   | G    M   ||",
-                            "R    G    M    G   | R    G   | M    P   ||",
-                            "S    N    D    N   | S    N   | D    P   ||",
-                            "N    D    P    D   | N    D   | P    M   ||"
-                        ])
-                    ]
-                )
-            ]
-        case "jantai-varisaigal":
-            return [
-                LearnLesson(
-                    id: "lesson-2-jantai",
-                    title: "Lesson 2 - Jantai Varisaigal",
-                    raga: "Mayamalavagowla",
-                    thalam: "Adi tala",
-                    note: "Use paired swaras to build steadiness. Each pair should sound even, not punched.",
-                    exercises: [
-                        NotationExercise(id: "jantai-1", number: "1.", lines: [
-                            "SS   RR   GG   MM  | PP   DD  | NN   SS  ||",
-                            "SS   NN   DD   PP  | MM   GG  | RR   SS  ||"
-                        ]),
-                        NotationExercise(id: "jantai-2", number: "2.", lines: [
-                            "SS   RR   GG   MM  | RR   GG  | MM   PP  ||",
-                            "GG   MM   PP   DD  | MM   PP  | DD   NN  ||",
-                            "PP   DD   NN   SS  | SS   NN  | DD   PP  ||",
-                            "NN   DD   PP   MM  | DD   PP  | MM   GG  ||"
-                        ])
-                    ]
-                )
-            ]
-        case "dhattu-upper-sthayi":
-            return [
-                LearnLesson(
-                    id: "lesson-3-dhattu",
-                    title: "Lesson 3 - Dhattu Varisaigal",
-                    raga: "Mayamalavagowla",
-                    thalam: "Adi tala",
-                    note: "Dhattu patterns jump across the scale. Practice slowly until every landing swara is accurate.",
-                    exercises: [
-                        NotationExercise(id: "dhattu-1", number: "1.", lines: [
-                            "S    G    R    M   | G    P   | M    D   ||",
-                            "P    N    D    S   | N    D   | P    M   ||",
-                            "G    R    S    -   | S    -   | -    -   ||"
-                        ]),
-                        NotationExercise(id: "upper-1", number: "2.", lines: [
-                            "S    R    G    M   | P    D   | N    S'  ||",
-                            "S'   N    D    P   | M    G   | R    S   ||"
-                        ])
-                    ]
-                )
-            ]
-        case "saptha-thala-alankaras":
-            return [
-                LearnLesson(
-                    id: "lesson-6-alankaras",
-                    title: "Lesson 6 - Saptha Thala Alankaras",
-                    raga: "Mayamalavagowla",
-                    thalam: "Multiple thalas",
-                    note: "These patterns apply swara movement to different tala structures. Clap the tala first, then add swaras.",
-                    exercises: [
-                        NotationExercise(id: "alankara-dhruva", number: "1.", lines: [
-                            "Dhruva:  1 0 1 1  | 4 + 2 + 4 + 4",
-                            "S R G R | S R G M | R G M P | M G R S"
-                        ]),
-                        NotationExercise(id: "alankara-rupaka", number: "2.", lines: [
-                            "Rupaka:  0 1      | 2 + 4",
-                            "S R | G M P D | S N | D P M G"
-                        ])
-                    ]
-                )
-            ]
-        case "geethas":
-            return [
-                LearnLesson(
-                    id: "lesson-8-geethas",
-                    title: "Lesson 8 - Geetha Practice",
-                    raga: "Malahari and other beginner ragas",
-                    thalam: "Rupaka / Triputa / Adi",
-                    note: "Use this section as a placeholder for song-specific geetha notation. Add each geetham as its own song resource later.",
-                    exercises: [
-                        NotationExercise(id: "geetha-method", number: "1.", lines: [
-                            "Step 1: Sing swaras only with tala.",
-                            "Step 2: Sing sahityam slowly.",
-                            "Step 3: Alternate swara and sahityam."
-                        ])
-                    ]
-                )
-            ]
-        default:
+        guard let urls = Bundle.main.urls(
+            forResourcesWithExtension: "json",
+            subdirectory: "LearnLessons/\(chapterID)"
+        ) else {
             return []
         }
+
+        return urls
+            .sorted { $0.lastPathComponent < $1.lastPathComponent }
+            .compactMap { url in
+                do {
+                    let data = try Data(contentsOf: url)
+                    return try JSONDecoder().decode(LearnLesson.self, from: data)
+                } catch {
+                    assertionFailure("Could not load learn lesson \(url.lastPathComponent): \(error)")
+                    return nil
+                }
+            }
     }
 }
 
@@ -478,7 +384,7 @@ private struct TopicGrid: View {
     let chapter: LearnChapter
 
     var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 120), spacing: 8)], alignment: .leading, spacing: 8) {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 92), spacing: 8)], alignment: .leading, spacing: 8) {
             ForEach(chapter.topics, id: \.self) { topic in
                 NavigationLink {
                     LearnTopicDetailView(chapter: chapter, topic: topic)
@@ -492,9 +398,9 @@ private struct TopicGrid: View {
                     }
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(AppTheme.primary)
-                    .frame(maxWidth: .infinity, minHeight: 38, alignment: .leading)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 8)
+                    .frame(maxWidth: .infinity, minHeight: 30, alignment: .leading)
+                    .padding(.horizontal, 9)
+                    .padding(.vertical, 6)
                     .background(AppTheme.primarySoft)
                     .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                 }

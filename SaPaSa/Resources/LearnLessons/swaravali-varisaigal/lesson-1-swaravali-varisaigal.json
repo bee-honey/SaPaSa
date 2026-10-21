@@ -1,0 +1,107 @@
+{
+  "id": "lesson-1-swaravali-varisaigal",
+  "title": "Lesson 1 - Swaravali Varisaigal",
+  "raga": "Mayamalavagowla",
+  "thalam": "Adi tala",
+  "note": "Editable starter data for sarali / swaravali practice. Add, remove, or correct rows here without changing Swift code.",
+  "exercises": [
+    {
+      "id": "swaravali-1",
+      "number": "1.",
+      "lines": [
+        "Sa   Ri   Ga   Ma  | Pa   Da  | Ni   Sa  ||",
+        "Sa   Ni   Da   Pa  | Ma   Ga  | Ri   Sa  ||"
+      ]
+    },
+    {
+      "id": "swaravali-2",
+      "number": "2.",
+      "lines": [
+        "S    R    S    R   | S    R   | G    M   ||",
+        "S    R    G    M   | P    D   | N    S   ||",
+        "S    N    S    N   | S    N   | D    P   ||",
+        "S    N    D    P   | M    G   | R    S   ||"
+      ]
+    },
+    {
+      "id": "swaravali-3",
+      "number": "3.",
+      "lines": [
+        "S    R    G    R   | S    R   | G    M   ||",
+        "R    G    M    G   | R    G   | M    P   ||",
+        "S    N    D    N   | S    N   | D    P   ||",
+        "N    D    P    D   | N    D   | P    M   ||"
+      ]
+    },
+    {
+      "id": "swaravali-4",
+      "number": "4.",
+      "lines": [
+        "S    R    G    M   | G    R   | S    R   ||",
+        "R    G    M    P   | M    G   | R    G   ||",
+        "S    N    D    P   | D    N   | S    N   ||",
+        "N    D    P    M   | P    D   | N    D   ||"
+      ]
+    },
+    {
+      "id": "swaravali-5",
+      "number": "5.",
+      "lines": [
+        "S    R    G    M   | P    M   | G    R   ||",
+        "R    G    M    P   | D    P   | M    G   ||",
+        "S    N    D    P   | M    P   | D    N   ||",
+        "N    D    P    M   | G    M   | P    D   ||"
+      ]
+    },
+    {
+      "id": "swaravali-6",
+      "number": "6.",
+      "lines": [
+        "S    R    G    M   | P    D   | P    M   ||",
+        "G    R    S    R   | G    M   | P    D   ||",
+        "S    N    D    P   | M    G   | M    P   ||",
+        "D    N    S    N   | D    P   | M    G   ||"
+      ]
+    },
+    {
+      "id": "swaravali-7",
+      "number": "7.",
+      "lines": [
+        "S    R    G    M   | P    D   | N    D   ||",
+        "P    M    G    R   | S    R   | G    M   ||",
+        "S    N    D    P   | M    G   | R    G   ||",
+        "M    P    D    N   | S    N   | D    P   ||"
+      ]
+    },
+    {
+      "id": "swaravali-8",
+      "number": "8.",
+      "lines": [
+        "S    R    G    M   | P    D   | N    S   ||",
+        "R    G    M    P   | D    N   | S    R   ||",
+        "S    N    D    P   | M    G   | R    S   ||",
+        "N    D    P    M   | G    R   | S    N   ||"
+      ]
+    },
+    {
+      "id": "swaravali-9",
+      "number": "9.",
+      "lines": [
+        "S    G    R    M   | G    P   | M    D   ||",
+        "P    N    D    S   | N    D   | P    M   ||",
+        "S    D    N    P   | D    M   | P    G   ||",
+        "M    R    G    S   | R    S   | -    -   ||"
+      ]
+    },
+    {
+      "id": "swaravali-10",
+      "number": "10.",
+      "lines": [
+        "S    R    G    M   | R    G   | M    P   ||",
+        "G    M    P    D   | M    P   | D    N   ||",
+        "S    N    D    P   | N    D   | P    M   ||",
+        "D    P    M    G   | P    M   | G    R   ||"
+      ]
+    }
+  ]
+}

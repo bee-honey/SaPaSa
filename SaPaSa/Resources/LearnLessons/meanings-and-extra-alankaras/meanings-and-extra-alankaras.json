@@ -1,0 +1,27 @@
+{
+  "id": "meanings-and-extra-alankaras",
+  "title": "Meanings and Additional Alankaras",
+  "raga": "Reference",
+  "thalam": "Multiple jathis",
+  "note": "Editable closing reference section for meanings and expanded alankara practice.",
+  "exercises": [
+    {
+      "id": "meaning-template",
+      "number": "1.",
+      "lines": [
+        "Song: add title",
+        "Meaning: add concise meaning",
+        "Practice note: connect lyric meaning to phrase."
+      ]
+    },
+    {
+      "id": "extra-alankara-template",
+      "number": "2.",
+      "lines": [
+        "Choose thala family.",
+        "Choose jathi.",
+        "Add verified swara pattern rows."
+      ]
+    }
+  ]
+}
