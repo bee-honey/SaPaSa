@@ -1,0 +1,104 @@
+# SaPaSa
+
+**A SwiftUI iPhone app for practicing Carnatic music: songs with swara notation, lyrics, and raga/tala details, plus a structured beginner lesson path.**
+
+SaPaSa (from *Sa–Pa–Sa*, the tonic–fifth–octave drone every Carnatic student tunes to) puts the material a beginner works through in one place: from Swaravali Varisaigal up to Geethams and Swarajathis.
+
+## Features
+
+### Song library
+- Browse a library of Carnatic songs
+- Search by song, raagam, thalam, or artist
+- Filter by raagam, thalam, and whether audio or video is available
+- Save favorites (kept on the device)
+
+### Song practice
+- **Notes** and **Lyrics** tabs for each song
+- A **Video** tab that appears only when the song has video
+- Expandable details: artists (composer, lyricist, singer…), thalam structure, and raaga lakshanam (arohanam / avarohanam, melakartha status, Hindustani equivalent)
+- Mini audio player shell for Notes and Lyrics
+
+### Learn
+A chapter-by-chapter beginner guide, with lessons loaded from bundled JSON:
+
+| # | Chapter |
+|---|---------|
+| 1 | Swaravali Varisaigal (Sarali) |
+| 2 | Jantai Varisaigal |
+| 3–4 | Dhattu Varisaigal & Upper Sthayi Varisaigal |
+| 5 | Thalas |
+| 6 | Saptha Thala Alankaras |
+| 7 | Swaras & Raga Symbols |
+| 8 | Geethas |
+| 9 | Swarajathis |
+| 10–11 | Notes & Bruga Sadaka |
+| — | Lakshana Geetham, Meanings & Extra Alankaras |
+
+## Requirements
+
+- Xcode 15 or later
+- iOS 17.0+ (iPhone)
+- No third-party dependencies
+
+## Getting started
+
+```bash
+git clone <repo-url>
+cd SaPaSa
+open SaPaSa.xcodeproj
+```
+
+Pick an iPhone simulator and press **⌘R**.
+
+## Project structure
+
+```
+SaPaSa/
+├── SaPaSaApp.swift          # App entry point
+├── Models/                  # Song, Raagam, Thalam, Artist, Resource models
+├── Stores/                  # SongLibraryStore: library, search, filters, favorites
+├── Views/                   # Home, Learn, Favorites, Settings, Song detail, theme
+├── Resources/
+│   └── LearnLessons/        # Lesson content as JSON, one folder per chapter
+└── Assets.xcassets
+docs/
+└── sapasa-mobile-app-blueprint.md   # Product and architecture blueprint
+```
+
+## Adding or editing lessons
+
+Lesson content lives in JSON, so you can change it without touching Swift code. Each chapter is a folder under `SaPaSa/Resources/LearnLessons/<chapter-id>/`. Every `.json` file in that folder is loaded, sorted by file name.
+
+```json
+{
+  "id": "lesson-1-swaravali-varisaigal",
+  "title": "Lesson 1 - Swaravali Varisaigal",
+  "raga": "Mayamalavagowla",
+  "thalam": "Adi tala",
+  "note": "Optional note shown with the lesson.",
+  "exercises": [
+    {
+      "id": "swaravali-1",
+      "number": "1.",
+      "lines": [
+        "Sa   Ri   Ga   Ma  | Pa   Da  | Ni   Sa  ||",
+        "Sa   Ni   Da   Pa  | Ma   Ga  | Ri   Sa  ||"
+      ]
+    }
+  ]
+}
+```
+
+To start a new Geetham, copy `geethas/geetha-template.json`.
+
+## Roadmap
+
+- [ ] Store song metadata locally (SQLite)
+- [ ] Sync content from a GitHub-hosted `manifest.json`
+- [ ] Download notes, lyrics, audio, and video once and keep them for offline use
+- [ ] Track download status
+- [ ] Real audio and video playback
+
+## Contributing
+
+Corrections to notation, raga details, or lesson content are welcome. Most content fixes are JSON-only edits under `Resources/LearnLessons`. Please open an issue or pull request.
