@@ -69,6 +69,7 @@ struct SongResource: Identifiable, Hashable {
     let format: String
     let durationSeconds: Int?
     let isBundled: Bool
+    var sizeBytes: Int? = nil
 }
 
 struct Song: Identifiable, Hashable {

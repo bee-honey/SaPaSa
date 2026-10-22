@@ -2,7 +2,13 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject private var library: SongLibraryStore
-    @State private var isRefreshing = false
+    @EnvironmentObject private var downloads: MediaDownloadStore
+    @State private var isDownloadingAll = false
+    @State private var confirmingDelete = false
+
+    private var pendingDownloads: Int {
+        downloads.pendingCount(in: library.songs)
+    }
 
     var body: some View {
         NavigationStack {
@@ -20,16 +26,21 @@ struct SettingsView: View {
                                 .font(.subheadline)
                                 .foregroundStyle(AppTheme.mutedInk)
 
+                            if let date = library.lastRefreshDate {
+                                Text("Last checked \(date.formatted(date: .abbreviated, time: .shortened))")
+                                    .font(.caption)
+                                    .foregroundStyle(AppTheme.mutedInk)
+                            }
+
                             Button {
                                 Task {
-                                    isRefreshing = true
                                     await library.refreshLibrary()
-                                    isRefreshing = false
+                                    downloads.refreshDownloadedPaths()
                                 }
                             } label: {
                                 HStack {
-                                    Image(systemName: isRefreshing ? "arrow.clockwise" : "arrow.triangle.2.circlepath")
-                                    Text(isRefreshing ? "Refreshing" : "Refresh from GitHub")
+                                    Image(systemName: library.isRefreshing ? "arrow.clockwise" : "arrow.triangle.2.circlepath")
+                                    Text(library.isRefreshing ? "Refreshing" : "Refresh from GitHub")
                                     Spacer()
                                 }
                                 .font(.headline)
@@ -38,19 +49,45 @@ struct SettingsView: View {
                                 .background(AppTheme.primary)
                                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                             }
-                            .disabled(isRefreshing)
+                            .disabled(library.isRefreshing)
                         }
                         .sapasaCard()
 
                         VStack(alignment: .leading, spacing: 10) {
-                            Label("Storage plan", systemImage: "internaldrive.fill")
+                            Label("Downloads", systemImage: "internaldrive.fill")
                                 .font(.headline)
                                 .foregroundStyle(AppTheme.primary)
 
-                            Text("v1 uses bundled sample data. v2 will fetch a GitHub manifest, store metadata locally, and download song media only once per installation.")
+                            Text("Audio and video download once and stay on this device. \(ByteCountFormatter.string(fromByteCount: downloads.storageUsedBytes, countStyle: .file)) used.")
                                 .font(.subheadline)
                                 .foregroundStyle(AppTheme.mutedInk)
                                 .fixedSize(horizontal: false, vertical: true)
+
+                            if pendingDownloads > 0 || isDownloadingAll {
+                                Button {
+                                    Task {
+                                        isDownloadingAll = true
+                                        await downloads.downloadAll(library.songs)
+                                        isDownloadingAll = false
+                                    }
+                                } label: {
+                                    Label(
+                                        isDownloadingAll ? "Downloading… \(pendingDownloads) left" : "Download all (\(pendingDownloads) files)",
+                                        systemImage: "arrow.down.circle.fill"
+                                    )
+                                    .font(.subheadline.weight(.semibold))
+                                }
+                                .tint(AppTheme.primary)
+                                .disabled(isDownloadingAll)
+                            }
+
+                            if !downloads.downloadedPaths.isEmpty {
+                                Button("Remove downloaded audio & video", role: .destructive) {
+                                    confirmingDelete = true
+                                }
+                                .font(.subheadline.weight(.semibold))
+                                .disabled(isDownloadingAll)
+                            }
                         }
                         .sapasaCard()
                     }
@@ -58,6 +95,13 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
+            .confirmationDialog("Remove all downloaded audio and video?", isPresented: $confirmingDelete, titleVisibility: .visible) {
+                Button("Remove downloads", role: .destructive) {
+                    downloads.deleteAll()
+                }
+            } message: {
+                Text("Notes and lyrics stay. Media can be downloaded again later.")
+            }
         }
     }
 }

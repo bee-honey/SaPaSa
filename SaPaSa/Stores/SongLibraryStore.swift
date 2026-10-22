@@ -9,12 +9,27 @@ final class SongLibraryStore: ObservableObject {
     @Published var showOnlyWithAudio = false
     @Published var showOnlyWithVideo = false
     @Published var lastRefreshMessage = "Bundled library loaded"
+    @Published private(set) var isRefreshing = false
+    @Published private(set) var lastRefreshDate: Date?
 
     private let favoritesKey = "sapasa.favoriteSongIDs"
+    private let lastRefreshKey = "sapasa.lastRefreshDate"
+    private var localLibrary: ContentManifest?
 
     init() {
-        songs = SampleLibrary.songs
+        localLibrary = ContentSyncService.loadLocalLibrary()
+        songs = localLibrary?.makeSongs() ?? SampleLibrary.songs
         favoriteSongIDs = Set(UserDefaults.standard.stringArray(forKey: favoritesKey) ?? [])
+        lastRefreshDate = UserDefaults.standard.object(forKey: lastRefreshKey) as? Date
+        if localLibrary != nil {
+            lastRefreshMessage = "Library saved on this device."
+        }
+    }
+
+    /// Syncs once, on first launch. After that the saved library is used until the user taps Refresh.
+    func syncIfNeeded() async {
+        guard localLibrary == nil else { return }
+        await refreshLibrary()
     }
 
     var favoriteSongs: [Song] {
@@ -86,8 +101,20 @@ final class SongLibraryStore: ObservableObject {
     }
 
     func refreshLibrary() async {
-        try? await Task.sleep(for: .milliseconds(700))
-        lastRefreshMessage = "Library checked. GitHub sync will land in v2."
+        guard !isRefreshing else { return }
+        isRefreshing = true
+        defer { isRefreshing = false }
+
+        do {
+            let (library, summary) = try await ContentSyncService.sync(current: localLibrary)
+            localLibrary = library
+            songs = library.makeSongs()
+            lastRefreshDate = Date()
+            UserDefaults.standard.set(lastRefreshDate, forKey: lastRefreshKey)
+            lastRefreshMessage = summary.message
+        } catch {
+            lastRefreshMessage = "Could not refresh: \(error.localizedDescription)"
+        }
     }
 }
 

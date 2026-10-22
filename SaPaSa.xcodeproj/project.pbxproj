@@ -23,6 +23,8 @@
 		3A0A00233A0A000000000001 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A00223A0A000000000001 /* PrivacyInfo.xcprivacy */; };
 		3A0A00253A0A000000000001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A00243A0A000000000001 /* LaunchScreen.storyboard */; };
 		3A0A00353A0A000000000001 /* LearnLessons in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A00343A0A000000000001 /* LearnLessons */; };
+		3A0A00373A0A000000000001 /* ContentManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A00363A0A000000000001 /* ContentManifest.swift */; };
+		3A0A00393A0A000000000001 /* ContentSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A00383A0A000000000001 /* ContentSyncService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		3A0A00263A0A000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0A00273A0A000000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3A0A00343A0A000000000001 /* LearnLessons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources/LearnLessons; sourceTree = "<group>"; };
+		3A0A00363A0A000000000001 /* ContentManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManifest.swift; sourceTree = "<group>"; };
+		3A0A00383A0A000000000001 /* ContentSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSyncService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0A000C3A0A000000000001 /* SaPaSaModels.swift */,
+				3A0A00363A0A000000000001 /* ContentManifest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0A000E3A0A000000000001 /* SongLibraryStore.swift */,
+				3A0A00383A0A000000000001 /* ContentSyncService.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 				3A0A001D3A0A000000000001 /* SettingsView.swift in Sources */,
 				3A0A001F3A0A000000000001 /* EmptyStateView.swift in Sources */,
 				3A0A00333A0A000000000001 /* LearnView.swift in Sources */,
+				3A0A00373A0A000000000001 /* ContentManifest.swift in Sources */,
+				3A0A00393A0A000000000001 /* ContentSyncService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

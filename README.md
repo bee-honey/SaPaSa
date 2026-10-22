@@ -16,7 +16,7 @@ SaPaSa (from *Sa–Pa–Sa*, the tonic–fifth–octave drone every Carnatic stu
 - **Notes** and **Lyrics** tabs for each song
 - A **Video** tab that appears only when the song has video
 - Expandable details: artists (composer, lyricist, singer…), thalam structure, and raaga lakshanam (arohanam / avarohanam, melakartha status, Hindustani equivalent)
-- Mini audio player shell for Notes and Lyrics
+- Audio player for Notes and Lyrics; audio and video download once and play offline
 
 ### Learn
 A chapter-by-chapter beginner guide, with lessons loaded from bundled JSON:
@@ -56,13 +56,14 @@ Pick an iPhone simulator and press **⌘R**.
 SaPaSa/
 ├── SaPaSaApp.swift          # App entry point
 ├── Models/                  # Song, Raagam, Thalam, Artist, Resource models
-├── Stores/                  # SongLibraryStore: library, search, filters, favorites
+├── Stores/                  # SongLibraryStore (library, search, favorites), ContentSyncService (GitHub sync, downloads)
 ├── Views/                   # Home, Learn, Favorites, Settings, Song detail, theme
 ├── Resources/
 │   └── LearnLessons/        # Lesson content as JSON, one folder per chapter
 └── Assets.xcassets
 docs/
-└── sapasa-mobile-app-blueprint.md   # Product and architecture blueprint
+├── sapasa-mobile-app-blueprint.md   # Product and architecture blueprint
+└── content-repo-template/          # Starter content repo to push to GitHub
 ```
 
 ## Adding or editing lessons
@@ -91,13 +92,24 @@ Lesson content lives in JSON, so you can change it without touching Swift code. 
 
 To start a new Geetham, copy `geethas/geetha-template.json`.
 
+## Content from GitHub
+
+Songs come from a separate public content repo ([`bee-honey/sapasa-content`](https://github.com/bee-honey/sapasa-content)), so new songs don't need an app update and there are no storage costs.
+
+- The app syncs `manifest.json` once on first launch, then only when the user taps **Settings → Refresh from GitHub**.
+- Each refresh downloads notes and lyrics only for songs whose `version` changed.
+- MP3/MP4 files are hosted as GitHub Release files. Each one downloads once, on request (per song, or **Download all**), and plays from the device after that.
+- Everything is stored in Application Support and excluded from iCloud backup. The bundled sample songs are shown until the first sync succeeds.
+
+The manifest URL is set in `ContentConfig` (`SaPaSa/Stores/ContentSyncService.swift`). A ready-to-push content repo, with instructions, is in [`docs/content-repo-template`](docs/content-repo-template).
+
 ## Roadmap
 
-- [ ] Store song metadata locally (SQLite)
-- [ ] Sync content from a GitHub-hosted `manifest.json`
-- [ ] Download notes, lyrics, audio, and video once and keep them for offline use
-- [ ] Track download status
-- [ ] Real audio and video playback
+- [x] Sync content from a GitHub-hosted `manifest.json`
+- [x] Download notes, lyrics, audio, and video once for offline use
+- [x] Real audio and video playback
+- [ ] Deliver Learn lessons through the same sync
+- [ ] Background downloads that continue when the app is closed
 
 ## Contributing
 
