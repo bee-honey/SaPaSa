@@ -23,14 +23,14 @@
       "artists": [
         { "name": "Muthuswami Dikshitar", "role": "composer" }
       ],
-      "notesUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/vatapi-ganapathim/notes.txt",
-      "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/vatapi-ganapathim/lyrics.txt",
+      "notesUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/vatapi-ganapathim/notes.txt",
+      "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/vatapi-ganapathim/lyrics.txt",
       "media": [
         {
           "id": "audio",
           "type": "audio",
           "title": "Practice audio",
-          "url": "https://github.com/bee-honey/sapasa-content/releases/download/media-v1/vatapi-ganapathim.mp3",
+          "url": "https://github.com/bee-honey/SaPaSa/releases/download/media-v1/vatapi-ganapathim.mp3",
           "durationSeconds": 248
         }
       ]
@@ -45,8 +45,8 @@
       "artists": [
         { "name": "Purandara Dasa", "role": "creator" }
       ],
-      "notesUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/lambodara/notes.txt",
-      "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/lambodara/lyrics.txt"
+      "notesUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/lambodara/notes.txt",
+      "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/lambodara/lyrics.txt"
     },
     {
       "id": "ninnukori",
@@ -58,8 +58,8 @@
       "artists": [
         { "name": "Ramnad Srinivasa Iyengar", "role": "composer" }
       ],
-      "notesUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/ninnukori/notes.txt",
-      "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/ninnukori/lyrics.txt"
+      "notesUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/ninnukori/notes.txt",
+      "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/ninnukori/lyrics.txt"
     }
   ]
 }

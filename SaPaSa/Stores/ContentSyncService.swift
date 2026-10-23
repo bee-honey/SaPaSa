@@ -2,7 +2,7 @@ import Foundation
 
 enum ContentConfig {
     /// Where the app looks for content. Push `manifest.json` to this repo's main branch.
-    static let manifestURL = URL(string: "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/manifest.json")!
+    static let manifestURL = URL(string: "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/manifest.json")!
 }
 
 /// On-device locations. Everything lives in Application Support (which iOS does not purge)

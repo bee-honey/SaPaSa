@@ -1,22 +1,24 @@
 # SaPaSa Content
 
-Songs, notes, lyrics, and practice media for the [SaPaSa](https://github.com/bee-honey/SaPaSa) iPhone app.
+Songs, notes, lyrics, and practice media for the SaPaSa iPhone app. This folder is not built into the app. The app downloads it from GitHub.
 
-The app reads `manifest.json` from this repo's `main` branch. It syncs automatically on first launch and again whenever someone taps **Settings → Refresh from GitHub**. Each refresh downloads only songs that are new or changed.
+The app reads `content/manifest.json` from the `main` branch. It syncs automatically on first launch and again whenever someone taps **Settings → Refresh from GitHub**. Each refresh downloads only songs that are new or changed.
 
 ## Layout
 
 ```
-manifest.json              # The list of songs, raagams, and thalams
-songs/<song-id>/notes.txt  # Swara notation
-songs/<song-id>/lyrics.txt # Lyrics
+content/
+├── manifest.json               # The list of songs, raagams, and thalams
+└── songs/<song-id>/
+    ├── notes.txt               # Swara notation
+    └── lyrics.txt              # Lyrics
 ```
 
-MP3 and MP4 files do **not** go in the repo. Attach them to a GitHub Release instead (see below). Release files are free to host and download, can be up to 2 GB each, and don't make the repo slow to clone.
+MP3 and MP4 files do **not** go in this folder. Attach them to a GitHub Release instead (see below). Release files are free to host and download, can be up to 2 GB each, and don't make the repo slow to clone.
 
 ## Adding a song
 
-1. Create `songs/<song-id>/notes.txt` and `lyrics.txt`.
+1. Create `content/songs/<song-id>/notes.txt` and `lyrics.txt`.
 2. Add an entry to `songs` in `manifest.json`:
 
 ```json
@@ -28,14 +30,14 @@ MP3 and MP4 files do **not** go in the repo. Attach them to a GitHub Release ins
   "raagam": "mohanam",
   "thalam": "adi",
   "artists": [{ "name": "Composer Name", "role": "composer" }],
-  "notesUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/my-song/notes.txt",
-  "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/sapasa-content/main/songs/my-song/lyrics.txt",
+  "notesUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/my-song/notes.txt",
+  "lyricsUrl": "https://raw.githubusercontent.com/bee-honey/SaPaSa/main/content/songs/my-song/lyrics.txt",
   "media": [
     {
       "id": "audio",
       "type": "audio",
       "title": "Practice audio",
-      "url": "https://github.com/bee-honey/sapasa-content/releases/download/media-v1/my-song.mp3",
+      "url": "https://github.com/bee-honey/SaPaSa/releases/download/media-v1/my-song.mp3",
       "durationSeconds": 240,
       "sizeBytes": 3800000
     }
@@ -52,10 +54,10 @@ MP3 and MP4 files do **not** go in the repo. Attach them to a GitHub Release ins
 
 ## Uploading audio and video
 
-1. On GitHub, open **Releases → Draft a new release**.
+1. On the SaPaSa repo on GitHub, open **Releases → Draft a new release**.
 2. Use a tag such as `media-v1`. The tag name becomes part of the download URL.
 3. Drag the MP3/MP4 files in and publish. Keep file names simple (no spaces).
-4. The download URL is `https://github.com/bee-honey/sapasa-content/releases/download/<tag>/<file-name>`. Put it in the song's `media` entry.
+4. The download URL is `https://github.com/bee-honey/SaPaSa/releases/download/<tag>/<file-name>`. Put it in the song's `media` entry.
 
 You can keep adding files to the same release later.
 

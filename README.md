@@ -62,8 +62,10 @@ SaPaSa/
 │   └── LearnLessons/        # Lesson content as JSON, one folder per chapter
 └── Assets.xcassets
 docs/
-├── sapasa-mobile-app-blueprint.md   # Product and architecture blueprint
-└── content-repo-template/          # Starter content repo to push to GitHub
+└── sapasa-mobile-app-blueprint.md   # Product and architecture blueprint
+content/                     # Songs the app syncs from GitHub (not built into the app)
+├── manifest.json
+└── songs/<song-id>/         # notes.txt, lyrics.txt
 ```
 
 ## Adding or editing lessons
@@ -94,14 +96,14 @@ To start a new Geetham, copy `geethas/geetha-template.json`.
 
 ## Content from GitHub
 
-Songs come from a separate public content repo ([`bee-honey/sapasa-content`](https://github.com/bee-honey/sapasa-content)), so new songs don't need an app update and there are no storage costs.
+Songs live in the [`content/`](content) folder of this repo, and the app downloads them straight from GitHub. New songs don't need an app update, and hosting costs nothing.
 
 - The app syncs `manifest.json` once on first launch, then only when the user taps **Settings → Refresh from GitHub**.
 - Each refresh downloads notes and lyrics only for songs whose `version` changed.
-- MP3/MP4 files are hosted as GitHub Release files. Each one downloads once, on request (per song, or **Download all**), and plays from the device after that.
+- MP3/MP4 files are attached to this repo's [Releases](https://github.com/bee-honey/SaPaSa/releases), not committed. Each one downloads once, on request (per song, or **Download all**), and plays from the device after that.
 - Everything is stored in Application Support and excluded from iCloud backup. The bundled sample songs are shown until the first sync succeeds.
 
-The manifest URL is set in `ContentConfig` (`SaPaSa/Stores/ContentSyncService.swift`). A ready-to-push content repo, with instructions, is in [`docs/content-repo-template`](docs/content-repo-template).
+The manifest URL is set in `ContentConfig` (`SaPaSa/Stores/ContentSyncService.swift`). To add or update songs, see [`content/README.md`](content/README.md).
 
 ## Roadmap
 
